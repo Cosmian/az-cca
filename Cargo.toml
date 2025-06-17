@@ -1,0 +1,20 @@
+[package]
+name = "az-cca"
+version = "0.1.0"
+edition = "2024"
+description = "Azure Confidential Container Attestation library"
+
+[lib]
+name = "az_cca"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+hyper-util = "0.1.14"
+prost = "0.13"
+tokio = { version = "1.45", features = ["macros", "rt-multi-thread"] }
+tokio-stream = "0.1"
+tonic = { version = "0.13", features = ["transport"] }
+tower = "0.5"
+
+[build-dependencies]
+tonic-build = "*"
